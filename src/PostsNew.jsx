@@ -9,7 +9,7 @@ export function PostsNew() {
         </div>
         <br />
         <div>
-          <label htmlFor="body">Body:</label>
+          <label htmlFor="body">Description:</label>
           <textarea id="body" name="body"></textarea>
         </div>
         <br />
