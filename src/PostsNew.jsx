@@ -2,7 +2,7 @@ export function PostsNew() {
   return (
     <div id="posts-new">
       <h1>Create New Post</h1>
-      <form>
+      <form action= "http://localhost:3000/posts.json" method="post">
         <div>
           <label htmlFor="title">Title:</label>
           <input type="text" id="title" name="title" />
