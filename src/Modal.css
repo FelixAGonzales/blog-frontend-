@@ -1,0 +1,89 @@
+.modal-background {
+  display: block; /* Ensure the modal background covers the entire screen */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); /* Dark background with slight transparency */
+  z-index: 1000; /* High z-index to appear above other elements */
+}
+
+.modal-main {
+  position: fixed;
+  background: white;
+  width: 80%; /* Width of the modal */
+  max-width: 600px; /* Maximum width to prevent too wide modals */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center the modal */
+  padding: 20px; /* Add padding inside the modal */
+  border-radius: 10px; /* Slightly rounded corners */
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+.modal-main button.close {
+  font-size: 1.5em; /* Size of the close button */
+  background: none; /* No background */
+  border: none; /* No border */
+  position: absolute;
+  top: 10px; 
+  right: 15px; /* Position close button at the top-right corner */
+  cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+.modal-main img {
+  max-width: 100%; /* Scale the image down to fit within the modal */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Ensure image is displayed as a block element */
+  margin: 10px 0; /* Add some space around the image */
+}
+
+/* CSS styles for the 'More Info' button */
+.info-button {
+  background-color: #333; /* Dark background */
+  color: white; /* White text */
+  padding: 10px 20px; /* Padding around the text */
+  font-size: 16px; /* Font size */
+  border: none; /* No border */
+  cursor: pointer; /* Pointer cursor on hover */
+  border-radius: 5px; /* Rounded corners */
+  transition: background-color 0.3s; /* Smooth transition on hover */
+}
+
+.info-button:hover {
+  background-color: #555; /* Lighter background on hover */
+}
+
+
+
+/* .modal-background {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width:100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1000;
+}
+
+.modal-main {
+  position:fixed;
+  background: white;
+  width: 80%;
+  height: auto;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  padding: 1em;
+}
+
+.modal-main button.close {
+  font-size: 2em;
+  background: none;
+  border: none;
+  position: absolute;
+  top: 0em; 
+  right: 0.2em;
+} */
