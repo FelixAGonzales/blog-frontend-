@@ -1,23 +1,25 @@
-import { PostsIndex } from "./PostsIndex";
-import { PostsNew } from "./PostsNew";
+// import { PostsIndex } from "./PostsIndex";
+// import { PostsNew } from "./PostsNew";
 import { Modal } from "./Modal";
 import { ShowAnimals } from "./ShowAnimals";
-import axios from "axios";
-import { useState, useEffect } from 'react';
+// import axios from "axios";
+// import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 export function PostsPage() {
-  var firstName = "Felix";
-  const [animals, setAnimals] = useState([]);
+  // var firstName = "Felix";
+  // const [animals, setAnimals] = useState([]);
   const [isAnimalsShowVisible, setIsAnimalsShowVisible] = useState(false);
-  const [currentAnimal, setCurrentAnimal] = useState({});
+  // const [currentAnimal, setCurrentAnimal] = useState({});
+  const [currentAnimal] = useState({});
 
-  const getAnimalsIndex = () => {
-    console.log('Hello');
-    axios.get("http://localhost:3000/posts.json").then(response => {
-      console.log(response.data);
-      setAnimals(response.data);
-    })
-  }
+  // const getAnimalsIndex = () => {
+  //   console.log('Hello');
+  //   axios.get("http://localhost:3000/posts.json").then(response => {
+  //     console.log(response.data);
+  //     setAnimals(response.data);
+  //   })
+  // }
 
   // const getAnimalsShow = () => {
   //   console.log('Hello');
@@ -59,26 +61,26 @@ export function PostsPage() {
   //   })
   // }
 
-  const handleCreate = (params) => {
-    console.log('handling create')
-    axios.post("http://localhost:3000/posts.json", params).then(response =>{
-      console.log(response.data);
+  // const handleCreate = (params) => {
+  //   console.log('handling create')
+  //   axios.post("http://localhost:3000/posts.json", params).then(response =>{
+  //     console.log(response.data);
       
-      setAnimals([...animals, response.data]);
-  })}
+  //     setAnimals([...animals, response.data]);
+  // })}
 
 
 
-  const handleShow = (animal) => {
-    setCurrentAnimal(animal);
-    setIsAnimalsShowVisible(true);
-  };
+  // const handleShow = (animal) => {
+  //   setCurrentAnimal(animal);
+  //   setIsAnimalsShowVisible(true);
+  // };
 
   const handleClose = () => {
     setIsAnimalsShowVisible(false);
   };
   
-  useEffect(getAnimalsIndex, []);
+  // useEffect(getAnimalsIndex, []);
 
 
   
@@ -89,8 +91,8 @@ export function PostsPage() {
       <button onClick={getAnimalsCreate}>Create 1</button>
       <button onClick={getAnimalsUpdate}>Update</button>
       <button onClick={getAnimalsDestroy}>Destroy</button> */}
-      <PostsNew onCreate={handleCreate}/>
-      <PostsIndex firstName={firstName} animals={animals} onShow={handleShow}/>;
+      {/* <PostsNew onCreate={handleCreate}/> */}
+      {/* <PostsIndex firstName={firstName} animals={animals} onShow={handleShow}/>; */}
       <Modal show={isAnimalsShowVisible} onClose={handleClose}>
         <ShowAnimals  currentAnimal={currentAnimal} />
       </Modal>
