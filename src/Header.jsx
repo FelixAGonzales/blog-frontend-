@@ -1,7 +1,9 @@
+import { LogoutLink } from "./LogoutLink";
+
 export function Header() {
   return (
     <header>
-      <a href="#">Home</a> | <a href="#posts-index">All posts</a> | <a href="#posts-new">New post</a>
+      <a href="#">Home</a> | <a href="#posts-index">All posts</a> | <a href="#posts-new">New post</a> <LogoutLink />
     </header>
   );
 }
