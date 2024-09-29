@@ -1,6 +1,7 @@
 import { PostsIndex } from "./PostsIndex";
 import { PostsNew } from "./PostsNew";
 import { Modal } from "./Modal";
+import { ShowAnimals } from "./ShowAnimals";
 import axios from "axios";
 import { useState, useEffect } from 'react';
 
@@ -58,6 +59,15 @@ export function PostsPage() {
     })
   }
 
+  const handleCreate = (params) => {
+    console.log('handling create')
+    axios.post("http://localhost:3000/posts.json", params).then(response =>{
+      console.log(response.data);
+      
+      setAnimals([...animals, response.data]);
+  })}
+
+
 
   const handleShow = (animal) => {
     setCurrentAnimal(animal);
@@ -68,9 +78,10 @@ export function PostsPage() {
     setIsAnimalsShowVisible(false);
   };
   
-  useEffect(getAnimalsIndex, [])
+  useEffect(getAnimalsIndex, []);
 
-7
+
+  
   return (
     <main>
       <button onClick={getAnimalsIndex}>Show All</button>
@@ -78,15 +89,10 @@ export function PostsPage() {
       <button onClick={getAnimalsCreate}>Create 1</button>
       <button onClick={getAnimalsUpdate}>Update</button>
       <button onClick={getAnimalsDestroy}>Destroy</button>
-      <PostsNew />
-      {/* <PostsIndex /> */}
+      <PostsNew onCreate={handleCreate}/>
       <PostsIndex firstName={firstName} animals={animals} onShow={handleShow}/>;
       <Modal show={isAnimalsShowVisible} onClose={handleClose}>
-        <div>
-          <p>Title: {currentAnimal.title}</p>
-          <p>Description: {currentAnimal.body}</p>
-          <img src={currentAnimal.image} alt="" />
-        </div>
+        <ShowAnimals  currentAnimal={currentAnimal} />
       </Modal>
     </main>
   );

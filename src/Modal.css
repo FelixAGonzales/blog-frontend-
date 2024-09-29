@@ -39,21 +39,6 @@
   margin: 10px 0; /* Add some space around the image */
 }
 
-/* CSS styles for the 'More Info' button */
-.info-button {
-  background-color: #333; /* Dark background */
-  color: white; /* White text */
-  padding: 10px 20px; /* Padding around the text */
-  font-size: 16px; /* Font size */
-  border: none; /* No border */
-  cursor: pointer; /* Pointer cursor on hover */
-  border-radius: 5px; /* Rounded corners */
-  transition: background-color 0.3s; /* Smooth transition on hover */
-}
-
-.info-button:hover {
-  background-color: #555; /* Lighter background on hover */
-}
 
 
 
