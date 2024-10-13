@@ -133,4 +133,8 @@ footer p {
   margin: 0;
 }
 
+#signup small {
+  color: red;
+}
+
 

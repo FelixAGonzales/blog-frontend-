@@ -21,13 +21,13 @@ export function PostsPage() {
   //   })
   // }
 
-  // const getAnimalsShow = () => {
-  //   console.log('Hello');
-  //   axios.get("http://localhost:3000/posts/1.json").then(response => {
-  //     console.log(response.data);
-  //     // setAnimals(response.data);
-  //   })
-  // }
+  const getAnimalsShow = () => {
+    console.log('Hello');
+    axios.get("http://localhost:3000/posts/1.json").then(response => {
+      console.log(response.data);
+      // setAnimals(response.data);
+    })
+  }
   
   // const getAnimalsCreate = () => {
   //   console.log('Hello');
@@ -71,10 +71,10 @@ export function PostsPage() {
 
 
 
-  // const handleShow = (animal) => {
-  //   setCurrentAnimal(animal);
-  //   setIsAnimalsShowVisible(true);
-  // };
+  const handleShow = (animal) => {
+    setCurrentAnimal(animal);
+    setIsAnimalsShowVisible(true);
+  };
 
   const handleClose = () => {
     setIsAnimalsShowVisible(false);
