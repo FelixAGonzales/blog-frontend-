@@ -1,4 +1,5 @@
 export function PostsIndex(props) {
+  
   console.log("The props are", props);
   return (
     <div id="posts-index">
